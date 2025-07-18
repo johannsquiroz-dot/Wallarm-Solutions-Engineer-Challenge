@@ -2,13 +2,12 @@
 
 ## 📌 Overview
 
-Welcome to the **Wallarm Solutions Engineer Technical Evaluation**. This exercise is designed to assess your ability to deploy and configure Wallarm's filtering nodes using a deployment method of your choice, troubleshoot any issues encountered, and document your process effectively. Additionally, we will evaluate your ability to leverage our official documentation to complete the task.
+This technical challenge was a good exercise to get me familiar with the deployment of a Wallarm filtering node, connect to a backend and create syntetic traffick using the GoTestWaf attack simulation tools. The exercise showed traffic being monitored by the Wallarm solution, and subsequently the malicious traffic getting blocked. All of the tools and processes used are new to me (since my experience has been showcasing the value and benefits of solutions from the user interface perspective). This was a good learning experience personally. 
 
 ---
 
 ## 🎯 Objectives
 
-By the end of this evaluation, you should be able to:
 
 ✅ Deploy a Wallarm filtering node using a supported method of your choice.  
 ✅ Configure a backend origin to receive test traffic. (httpbin.org is also acceptable)  
@@ -18,18 +17,13 @@ By the end of this evaluation, you should be able to:
 
 ---
 
-## 📂 Prerequisites
-
-Before you begin, ensure you have access to:
-
-- A **cloud or desktop environment** that supports one of Wallarm’s [deployment methods](https://docs.wallarm.com/installation/supported-deployment-options/) (**Kubernetes, Docker, VM, etc.**).
-- A **backend application** or API endpoint to receive test traffic.
-- **GoTestWAF**: [GitHub Repository](https://github.com/wallarm/gotestwaf)
-- **Wallarm official documentation**: [Documentation Portal](https://docs.wallarm.com/)
-
----
-
 ## 🚀 Task Breakdown
+
+✅ Deploy a Wallarm filtering node using a Docker
+
+
+
+
 
 ### 1️⃣ Deploy a Wallarm Filtering Node
 
@@ -78,9 +72,27 @@ Once you have completed the evaluation, submit the following:
 
 ---
 
+! [ ] 
+
+
+
 ## ℹ️ Additional Notes
 
-💡 You are encouraged to **ask questions and leverage Wallarm's documentation**.  
-📖 The ability to **document your troubleshooting steps** is just as important as the final deployment.  
 
-🚀 **Good luck, and we look forward to your submission!** 🎉
+AT the end of this evaluation, I was able to:
+
+
+✅ Configure a backend origin to receive test traffic. (httpbin.org) 
+✅ Use the GoTestWAF attack simulation tool to generate traffic.
+✅ Document the deployment and troubleshooting process.
+✅ Navigated Wallarm's official documentation to complete the steps.
+
+
+Notes & Observations
+This project demonstrates how to run a local Wallarm filtering node on Ubuntu OS Docker and generate attack traffic using GoTestWAF against a backend origin (httpbin.org).
+
+    * Conflicts on docker container and node ports used, had to select different ports to establish connectivity.
+    * Filtering Node was deployed locally on Ubuntu with passthrough variables. I had to verify and change the commands since I was getting syntax errors. 
+
+
+
