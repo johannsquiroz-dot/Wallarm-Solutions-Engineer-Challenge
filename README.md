@@ -44,7 +44,7 @@ johanns@Discovery:~$ curl -v httpbin.org/get
 ✅ Use the **GoTestWAF** attack simulation tool to generate traffic. 
 
 
-Johanns@Discovery:~$ docker run --rm --network="host" -it -v ${PWD}/reports:/app/reports wallarm/gotestwaf   --url=http://localhost:8100
+johanns@Discovery:~$ docker run --rm --network="host" -it -v ${PWD}/reports:/app/reports wallarm/gotestwaf   --url=http://localhost:8100
 INFO[0000] GoTestWAF started                             version=v0.5.7
 INFO[0000] Test cases loading started                   
 INFO[0000] Test cases loading finished                  
