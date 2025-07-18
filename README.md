@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This technical challenge was a good exercise to get me familiar with the deployment of a Wallarm filtering node, connect to a backend and create syntetic traffick using the GoTestWaf attack simulation tools. The exercise showed traffic being monitored by the Wallarm solution, and subsequently the malicious traffic getting blocked. All of the tools and processes used are new to me (since my experience has been showcasing the value and benefits of solutions from the user interface perspective). This was a good learning experience personally. 
+This technical challenge was a good exercise to get me familiar with the deployment of a Wallarm filtering node, connect to a backend (httpbin.org) and create syntetic traffick using the GoTestWaf attack simulation tools. The exercise showed traffic being monitored by the Wallarm solution, and subsequently blocking the malicious traffic. All of the tools and processes used are new to me (since my experience has been showcasing the value and benefits of solutions from the user interface perspective). This was a good learning experience personally. 
 
 ---
 
@@ -64,7 +64,8 @@ INFO[0305] Scanning finished                             duration=4m46.97465497s
 ✅ Document the deployment and troubleshooting process.  
 
 
-* Conflicts on docker container and node ports used, had to select different ports to establish connectivity.
+
+* Conflicts on docker container and node ports used, had to select different ports to establish connectivity. Took me time to identify how the filtering node port (set to monitoring) needed to point to the backend.
     * Filtering Node was deployed locally on Ubuntu with passthrough variables. I had to verify and change the commands since I was getting syntax errors.
     * Had to create a second filtering node to set the blocking directive. This was most likely due to my lack of experience setting up this platorm.
 
@@ -77,10 +78,6 @@ AT the end of this evaluation, I was able to:
 ✅ Use the GoTestWAF attack simulation tool to generate traffic.
 ✅ Document the deployment and troubleshooting process.
 ✅ Navigated Wallarm's official documentation to complete the steps.
-
-
-Notes & Observations
-This project demonstrates how to run a local Wallarm filtering node on Ubuntu OS Docker and generate attack traffic using GoTestWAF against a backend origin (httpbin.org).
 
     
 ## ✅ Evaluation Criteria
